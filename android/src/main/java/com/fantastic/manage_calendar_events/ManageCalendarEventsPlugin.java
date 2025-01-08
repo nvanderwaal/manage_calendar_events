@@ -62,16 +62,6 @@ public class ManageCalendarEventsPlugin implements FlutterPlugin, ActivityAware,
         methodChannel.setMethodCallHandler(null);
     }
 
-    /**
-     * Plugin registration.
-     */
-    public static void registerWith(Registrar registrar) {
-        Context context = registrar.context();
-        Activity activity = registrar.activity();
-        setup(new ManageCalendarEventsPlugin(), registrar.messenger(), activity, context);
-    }
-
-
     @Override
     public void onAttachedToActivity(@NonNull ActivityPluginBinding binding) {
         Log.d("DART/NATIVE", "onAttachedToActivity");
